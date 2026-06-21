@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBC News Portal - Unos vijesti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="zaglavlje">
+        <div class="okvir header-red">
+            <div class="logo">
+                <a href="index.html">BBC</a>
+            </div>
+
+            <nav class="navigacija">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#news">News</a></li>
+                    <li><a href="index.html#sport">Sport</a></li>
+                    <li><a href="unos.html" class="aktivna">Unos</a></li>
+                    <li><a href="#">Administracija</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="glavni-sadrzaj">
+        <div class="okvir okvir-forma">
+            <section class="kategorija-sekcija">
+                <h2 class="naslov-sekcije news-boja">Unos vijesti</h2>
+
+                <form name="unos_vijesti" action="skripta.php" method="POST" enctype="multipart/form-data" class="forma-unos" autocomplete="on">
+                    <div class="form-item">
+                        <label for="title">Naslov vijesti</label>
+                        <div class="form-field">
+                            <input type="text" id="title" name="title" class="form-field-textual" autofocus>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="about">Kratki sadržaj vijesti (do 50 znakova)</label>
+                        <div class="form-field">
+                            <textarea id="about" name="about" cols="30" rows="8" class="form-field-textual"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="content">Sadržaj vijesti</label>
+                        <div class="form-field">
+                            <textarea id="content" name="content" cols="30" rows="12" class="form-field-textual"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="pphoto">Slika</label>
+                        <div class="form-field">
+                            <input type="file" id="pphoto" name="pphoto" accept="image/jpg,image/jpeg,image/png,image/gif" class="input-text">
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="category">Kategorija vijesti</label>
+                        <div class="form-field">
+                            <select name="category" id="category" class="form-field-textual">
+                                <option value="News">News</option>
+                                <option value="Sport">Sport</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-item checkbox-red">
+                        <label for="archive">Prikazati na stranici</label>
+                        <div class="form-field">
+                            <input type="checkbox" id="archive" name="archive" value="1" checked>
+                        </div>
+                    </div>
+
+                    <div class="form-item gumbi-forme">
+                        <button type="reset">Poništi</button>
+                        <button type="submit">Prihvati</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="podnozje">
+        <div class="okvir">
+            <p>Domagoj Gadža | dgadza@tvz.hr | 2026.</p>
+        </div>
+    </footer>
+</body>
+</html>

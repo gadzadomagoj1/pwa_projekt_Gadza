@@ -1,0 +1,509 @@
+/* Osnovno resetiranje elemenata */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Osnovne postavke stranice */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e6e6e6;
+    color: #222222;
+    line-height: 1.4;
+}
+
+/* Slike */
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Linkovi */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Liste */
+ul {
+    list-style: none;
+}
+
+/* Zajednički okvir za centriranje sadržaja */
+.okvir {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* Header */
+.zaglavlje {
+    background-color: #000000;
+    width: 100%;
+}
+
+.header-red {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Logo */
+.logo {
+    background-color: #ffffff;
+    padding: 4px 6px;
+    margin-right: 14px;
+}
+
+.logo a {
+    display: block;
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+/* Navigacija */
+.navigacija ul {
+    display: flex;
+    align-items: center;
+}
+
+.navigacija ul li a {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 11px 16px;
+}
+
+.navigacija ul li a:hover,
+.navigacija ul li a.aktivna {
+    background-color: #1f1f1f;
+}
+
+/* Glavni sadržaj */
+.glavni-sadrzaj {
+    background-color: #e6e6e6;
+    padding-top: 28px;
+    padding-bottom: 40px;
+    min-height: calc(100vh - 120px);
+}
+
+/* Uvodni red */
+.uvodni-red {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.welcome-tekst {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.datum {
+    font-size: 16px;
+    color: #7b7b7b;
+}
+
+/* Sekcije */
+.kategorija-sekcija {
+    margin-bottom: 38px;
+}
+
+.naslov-sekcije {
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3b3b3b;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
+
+.naslov-sekcije::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 4px;
+    height: 18px;
+}
+
+.news-boja::before {
+    background-color: #c0392b;
+}
+
+.sport-boja::before {
+    background-color: #f1c40f;
+}
+
+/* Mreža vijesti */
+.grid-vijesti {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+/* Kartica vijesti */
+.kartica-vijesti img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.kartica-vijesti h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 6px;
+    color: #2a2a2a;
+}
+
+.kartica-vijesti h3 a:hover {
+    text-decoration: underline;
+}
+
+.kartica-vijesti p {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.35;
+}
+
+/* Stranica članka */
+.okvir-clanak {
+    max-width: 760px;
+}
+
+.traka-kategorije {
+    width: 100%;
+    padding: 6px 14px;
+    margin-bottom: 10px;
+}
+
+.traka-kategorije h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.news-traka {
+    background-color: #c0392b;
+}
+
+.sport-traka {
+    background-color: #f1c40f;
+}
+
+.clanak-detalj h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2f2f2f;
+    margin-bottom: 12px;
+}
+
+.slika-clanka {
+    margin-bottom: 12px;
+}
+
+.slika-clanka img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.slika-clanka figcaption {
+    font-size: 12px;
+    color: #444444;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.istaknuti-uvod {
+    font-weight: bold;
+}
+
+.clanak-detalj p {
+    font-size: 13px;
+    color: #333333;
+    line-height: 1.5;
+    margin-bottom: 14px;
+}
+
+/* Footer */
+.podnozje {
+    width: 100%;
+    background-color: #4b4b4b;
+    border-top: 1px solid #777777;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.podnozje .okvir {
+    border-top: 1px solid #7a7a7a;
+    padding-top: 16px;
+}
+
+.podnozje p {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Responzivnost */
+@media (max-width: 900px) {
+    .okvir {
+        max-width: 95%;
+    }
+
+    .grid-vijesti {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .header-red {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navigacija ul {
+        flex-wrap: wrap;
+    }
+
+    .navigacija ul li a {
+        padding: 10px 12px;
+    }
+
+    .uvodni-red {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .grid-vijesti {
+        grid-template-columns: 1fr;
+    }
+
+    .kartica-vijesti h3 {
+        font-size: 20px;
+    }
+
+    .kartica-vijesti p,
+    .clanak-detalj p {
+        font-size: 14px;
+    }
+
+    .clanak-detalj h1 {
+        font-size: 24px;
+    }
+
+    .traka-kategorije h2 {
+        font-size: 20px;
+    }
+}
+
+.okvir-forma {
+    max-width: 760px;
+}
+
+.forma-unos {
+    margin-top: 10px;
+}
+
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.form-field-textual,
+.input-text {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b7b7b7;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-field-textual:focus,
+.input-text:focus {
+    outline: none;
+    border-color: #555555;
+}
+
+textarea.form-field-textual {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.checkbox-red {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.checkbox-red .form-field {
+    width: auto;
+}
+
+.checkbox-red input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.gumbi-forme {
+    display: flex;
+    gap: 10px;
+}
+
+.gumbi-forme button {
+    background-color: #4b4b4b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.gumbi-forme button:hover {
+    background-color: #2f2f2f;
+}
+
+.meta-podaci {
+    margin-bottom: 14px;
+}
+
+.meta-podaci p {
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 6px;
+}
+
+.tekst-skripte p {
+    white-space: normal;
+}
+
+@media (max-width: 700px) {
+    .checkbox-red {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .gumbi-forme {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .gumbi-forme button {
+        width: 100%;
+    }
+}
+.admin-blok {
+    background-color: #f4f4f4;
+    border: 1px solid #cfcfcf;
+    padding: 18px;
+    margin-bottom: 25px;
+}
+
+.admin-blok img {
+    margin-top: 8px;
+    border: 1px solid #999999;
+}
+
+.form-field-textual,
+.input-text {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #b7b7b7;
+    background-color: #ffffff;
+    color: #222222;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-item {
+    margin-bottom: 18px;
+}
+
+.form-item label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.forma-unos {
+    margin-top: 14px;
+}
+
+.okvir-forma {
+    max-width: 760px;
+}
+
+.meta-podaci {
+    margin-bottom: 14px;
+}
+
+.meta-podaci p {
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 5px;
+}
+.bojaPoruke {
+    display: block;
+    color: #b30000;
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.uspjesna-poruka {
+    background-color: #dff0d8;
+    color: #2e6b2e;
+    border: 1px solid #9fcd9f;
+    padding: 12px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.greska-poruka {
+    background-color: #f8d7da;
+    color: #842029;
+    border: 1px solid #d7a6ad;
+    padding: 12px;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+
+.greska-poruka a {
+    text-decoration: underline;
+}
+
+.odjava-forma {
+    margin-bottom: 20px;
+}
